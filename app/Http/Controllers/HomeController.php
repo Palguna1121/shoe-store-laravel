@@ -89,7 +89,4 @@ class HomeController extends Controller
 
         return view('cart', compact('cartItems', 'products', 'totalPrice', 'tax', 'total'));
     }
-
-    public function updateCart(string $id) {}
-    public function removeCart(string $id) {}
 }
