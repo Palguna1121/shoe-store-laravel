@@ -15,4 +15,13 @@ class HomeController extends Controller
     {
         return view('product');
     }
+    public function productDetail()
+    {
+        return view('detail-product');
+    }
+
+    public function cart()
+    {
+        return view('cart');
+    }
 }

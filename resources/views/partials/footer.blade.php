@@ -38,8 +38,7 @@
             </div>
 
             <hr><!--horizontal line-->
-            <p class="copyright">Copyright 2021 - Apurba Kr. Pramanik</p>
+            <p class="copyright">Copyright 2024 - <a href="https://github.com/palguna1121">nanaaa</a></p>
 
         </div>
     </div>
-

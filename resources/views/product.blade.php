@@ -20,8 +20,8 @@
 
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
-                <a href="products-details.html">
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}">
                     <h4>Downshifter Sports Shoes</h4>
                 </a>
                 <div class="rating">
@@ -34,7 +34,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
                 <h4>Lace-Up Running Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -46,7 +46,7 @@
                 <p>$35.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
                 <h4>Lace Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -58,7 +58,7 @@
                 <p>$15.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
                 <h4>Flat Lace-Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -73,7 +73,7 @@
 
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-5.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-5.jpg') }}"></a>
                 <h4>Flat Heel Gray Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -85,7 +85,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
                 <h4>Lace-Fastening Black Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -97,7 +97,7 @@
                 <p>$21.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
                 <h4>HRX Men's Cotton Socks</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -109,7 +109,7 @@
                 <p>$09.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
                 <h4>Lace-Up Running Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -124,7 +124,7 @@
 
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
                 <h4>HRX Cotton Socks</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -136,7 +136,7 @@
                 <p>$10.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
                 <h4>Flat Lace-Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -148,7 +148,7 @@
                 <p>$48.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
                 <h4>Loafers Men (Gray)</h4>
                 <div class="rating">
                     <i class="fa fa-star-o"></i>
@@ -160,7 +160,7 @@
                 <p>$15.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-12.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-12.jpg') }}"></a>
                 <h4>Lace-Fastening White Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>

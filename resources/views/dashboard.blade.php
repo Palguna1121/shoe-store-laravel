@@ -8,7 +8,7 @@
             <h1>Give your Workout <br>A New Style!</h1>
             <p>Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains
                 success. Greatness will come.</p>
-            <a href="products.html" class="btn">Explore Now &#8594;</a>
+            <a href="{{ route('home.product') }}" class="btn">Explore Now &#8594;</a>
         </div>
         <div class="col-2">
             <img src="{{ asset('assets/images/image1.png') }}">
@@ -39,8 +39,8 @@
         <h2 class="title">Featured Products</h2>
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
-                <a href="products-details.html">
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}">
                     <h4>Downshifter Sports Shoes</h4>
                 </a>
                 <div class="rating">
@@ -54,7 +54,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
                 <h4>Lace-Up Running Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -66,7 +66,7 @@
                 <p>$35.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
                 <h4>Lace Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -78,7 +78,7 @@
                 <p>$15.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
                 <h4>Flat Lace-Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -95,7 +95,7 @@
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-5.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-5.jpg') }}"></a>
                 <h4>Flat Heel gray hoes</h4>
                 <div class="rating">
                     <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
@@ -108,7 +108,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
                 <h4>Lace-Fastening black Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -120,7 +120,7 @@
                 <p>$21.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
                 <h4>HRX Men's cotton socks</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -132,7 +132,7 @@
                 <p>$09.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
                 <h4>Lace-Up Running Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -147,7 +147,7 @@
         <!--new row for the latest product-->
         <div class="row">
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
                 <h4>HRX cotton socks</h4>
                 <div class="rating">
                     <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
@@ -160,7 +160,7 @@
                 <p>$10.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
                 <h4>Flat Lace-Fastening Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -172,7 +172,7 @@
                 <p>$48.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
                 <h4>Loafers Men (Gray)</h4>
                 <div class="rating">
                     <i class="fa fa-star-o"></i>
@@ -184,7 +184,7 @@
                 <p>$15.00</p>
             </div>
             <div class="col-4">
-                <a href="products-details.html"><img src="{{ asset('assets/images/product-12.jpg') }}"></a>
+                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-12.jpg') }}"></a>
                 <h4>Lace-Fastening white Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -210,7 +210,7 @@
                     <h1>Sports Shoes</h1>
                     <small> Buy latest collections of sports shoes online on Redstore at best prices from top brands
                         such as Adidas, Nike, Puma, Asics, and Sparx at your leisure at best prices. </small><br>
-                    <a href="products.html" class="btn">Buy Now &#8594;</a>
+                    <a href="{{ route('home.product') }}" class="btn">Buy Now &#8594;</a>
                 </div>
             </div>
         </div>
