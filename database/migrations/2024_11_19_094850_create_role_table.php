@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::table('users', function (Blueprint $table) {
             if (!Schema::hasColumn('users', 'role_id')) {
-                $table->foreignId('role_id')->constrained('role')->onDelete('cascade');
+                $table->foreignId('role_id')->after('password')->default(2)->constrained('role')->onDelete('cascade');
             }
         });
     }

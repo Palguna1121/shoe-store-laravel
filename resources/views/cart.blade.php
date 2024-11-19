@@ -4,8 +4,7 @@
 
 @section('content')
 
-    <!------------------------------ cart items details------------------------------>
-
+    <!------------------------------ cart items details ------------------------------>
     <div class="small-container cart-page">
         <table>
             <tr>
@@ -13,63 +12,42 @@
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="{{ asset('assets/images/buy-1.jpg') }}">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small><br>
-                            <a href="">Remove</a>
+            @foreach ($cartItems as $index => $cartItem)
+                @php
+                    $product = $products[$index]; // Ambil produk yang sesuai berdasarkan index
+                @endphp
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="{{ $product->url_image }}" alt="{{ $product->name }}">
+                            <div>
+                                <p>{{ $product->name }}</p>
+                                <small>Price: Rp. {{ number_format($product->price, 0, ',', '.') }}</small><br>
+                                <button type="submit">Remove</button>
+                            </div>
                         </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="{{ asset('assets/images/buy-2.jpg') }}">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small><br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="{{ asset('assets/images/buy-3.jpg') }}">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small><br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
+                    </td>
+                    <td>
+                        <input type="number" value="{{ $cartItem->qty }}" min="1" />
+                    </td>
+                    <td>Rp. {{ number_format($product->price * $cartItem->qty, 0, ',', '.') }}</td>
+                </tr>
+            @endforeach
         </table>
 
         <div class="total-price">
             <table>
                 <tr>
                     <td>Subtotal</td>
-                    <td>$200.00</td>
+                    <td>Rp {{ number_format($totalPrice, 0, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td>Tax</td>
-                    <td>$35.00</td>
+                    <td>Rp {{ number_format($tax, 0, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>$230.00</td>
+                    <td>Rp {{ number_format($total, 0, ',', '.') }}</td>
                 </tr>
             </table>
         </div>

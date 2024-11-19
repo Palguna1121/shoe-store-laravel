@@ -6,49 +6,54 @@
 
     <!------------------------------ Single product details------------------------------>
 
-    <div class="small-container single-product">
+    <form action="{{ route('cart.store', ['id' => $details->id]) }}" method="post" class="small-container single-product">
+        @csrf
+        @method('POST')
         <div class="row">
             <div class="col-2">
-                <img src="{{ asset('assets/images/product-11.jpg') }}" width="100%" id="productImg">
+                <img src="{{ $details->url_image }}" width="100%" id="productImg">
 
                 <div class="small-img-row">
                     <div class="small-img-col">
-                        <img src="{{ asset('assets/images/product-11.jpg') }}" width="100%" class="small-img">
+                        <img src="{{ $details->url_image }}" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="{{ asset('assets/images/product-5.jpg') }}" width="100%" class="small-img">
+                        <img src="{{ $details->url_image }}" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="{{ asset('assets/images/product-11.jpg') }}" width="100%" class="small-img">
+                        <img src="{{ $details->url_image }}" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="{{ asset('assets/images/product-5.jpg') }}" width="100%" class="small-img">
+                        <img src="{{ $details->url_image }}" width="100%" class="small-img">
                     </div>
                 </div>
             </div>
 
             <div class="col-2">
                 <p>Home / Shoes</p>
-                <h1>Downshifter Sports Shoes</h1>
-                <h4>$50.00</h4>
-                <select>
-                    <option>Select Size</option>
-                    <option>6<!--Small (s)--></option>
-                    <option>7<!--Medium (M)--></option>
-                    <option>8<!--Large (L)--></option>
-                    <option>9<!--XL--></option>
-                    <option>10<!--XXL--></option>
+                <h1>{{ $details->name }}</h1>
+                <h4>Rp. {{ $details->price }}</h4>
+                <select required name="size_id">
+                    <option value="" disabled selected>Select Size</option>
+                    @foreach ($size as $s)
+                        <option value="{{ $s->id }}">{{ $s->size }}</option>
+                    @endforeach
                 </select>
-                <input type="number" values="1">
-                <a href="{{ route('home.cart') }}" class="btn">Add to Cart</a>
+                <input required type="number" name="qty" values="1">
+
+                {{-- hiden input for user id --}}
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id ?? '' }}">
+                {{-- hiden input for product id --}}
+                <input type="hidden" name="product_id" value="{{ $details->id }}">
+
+
+                <button type="submit" class="btn">Add to Cart</button>
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                    of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                <p>{{ $details->description }}</p>
             </div>
         </div>
-    </div>
+    </form>
 
     <!----------------------------------Title------------------------------------->
     <div class="small-container">
@@ -63,56 +68,24 @@
     <!----------------------------------products------------------------------------->
     <div class="small-container">
         <div class="row">
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
-                <a href="{{ route('home.product.detail') }}">
-                    <h4>Downshifter Sports Shoes</h4>
-                </a>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
+            @foreach ($product->take(8) as $item)
+                <div class="col-4">
+                    <a href="{{ route('home.product.detail', ['id' => $item->id]) }}"><img
+                            src="{{ $item->url_image }}"></a>
+                    <a href="{{ route('home.product.detail', ['id' => $item->id]) }}">
+                        <h4>{{ $item->name }}</h4>
+                    </a>
+                    <div class="rating">
+                        <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>Rp. {{ $item->price }}</p>
                 </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
-                <h4>Lace-Up Running Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$35.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
-                <h4>Lace Fastening Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$15.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
-                <h4>Flat Lace-Fastening Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$48.00</p>
-            </div>
+            @endforeach
         </div>
     </div>
 

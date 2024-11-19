@@ -26,8 +26,8 @@
                     @endauth
                 </ul>
             </nav>
-            <a href="{{ route('home.cart') }}"><img src="{{ asset('assets/images/cart.png') }}" width="30px"
-                    height="30px"></a>
+            <a href="{{ route('cart.index', ['id' => Auth::user()->id ?? 0]) }}"><img
+                    src="{{ asset('assets/images/cart.png') }}" width="30px" height="30px"></a>
             <img src="{{ asset('assets/images/menu.png') }}" class="menu-icon" onClick="menutoggle()">
         </div>
         @yield('dashboard-head')

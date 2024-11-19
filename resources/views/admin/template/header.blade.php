@@ -133,7 +133,7 @@
                         <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
                             @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                             aria-haspopup="true">
-                            <img class="object-cover w-8 h-8 rounded-full" src="{{ asset('img/palguna.jpg') }}"
+                            <img class="object-cover w-8 h-8 rounded-full" src="{{ asset('assets/img/palguna.jpg') }}"
                                 alt="" aria-hidden="true" />
                         </button>
                         <template x-if="isProfileMenuOpen">

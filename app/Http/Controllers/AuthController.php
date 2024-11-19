@@ -60,11 +60,12 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password,
+            'role_id' => 2
         ]);
 
         Auth::login($user);
 
-        return redirect()->route('home');
+        return redirect()->route('home.index');
     }
 
     public function logout()

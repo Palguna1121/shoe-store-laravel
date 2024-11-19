@@ -38,164 +38,25 @@
     <div class="small-container">
         <h2 class="title">Featured Products</h2>
         <div class="row">
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
-                <a href="{{ route('home.product.detail') }}">
-                    <h4>Downshifter Sports Shoes</h4>
-                </a>
-                <div class="rating">
-                    <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
+            @foreach ($product->take(8) as $item)
+                <div class="col-4">
+                    <a href="{{ route('home.product.detail', ['id' => $item->id]) }}"><img src="{{ $item->url_image }}"></a>
+                    <a href="{{ route('home.product.detail', ['id' => $item->id]) }}">
+                        <h4>{{ $item->name }}</h4>
+                    </a>
+                    <div class="rating">
+                        <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>Rp. {{ $item->price }}</p>
                 </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
-                <h4>Lace-Up Running Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$35.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
-                <h4>Lace Fastening Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$15.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
-                <h4>Flat Lace-Fastening Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$48.00</p>
-            </div>
+            @endforeach
         </div>
 
-
-        <h2 class="title">Latest Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-5.jpg') }}"></a>
-                <h4>Flat Heel gray hoes</h4>
-                <div class="rating">
-                    <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-3.jpg') }}"></a>
-                <h4>Lace-Fastening black Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$21.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
-                <h4>HRX Men's cotton socks</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$09.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-2.jpg') }}"></a>
-                <h4>Lace-Up Running Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$35.00</p>
-            </div>
-        </div>
-        <!--new row for the latest product-->
-        <div class="row">
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-7.jpg') }}"></a>
-                <h4>HRX cotton socks</h4>
-                <div class="rating">
-                    <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$10.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-10.jpg') }}"></a>
-                <h4>Flat Lace-Fastening Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$48.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-11.jpg') }}"></a>
-                <h4>Loafers Men (Gray)</h4>
-                <div class="rating">
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$15.00</p>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('home.product.detail') }}"><img src="{{ asset('assets/images/product-12.jpg') }}"></a>
-                <h4>Lace-Fastening white Shoes</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>$21.00</p>
-            </div>
-        </div>
     </div>
 
     <!--------------------------`   offer   --------------------------------->

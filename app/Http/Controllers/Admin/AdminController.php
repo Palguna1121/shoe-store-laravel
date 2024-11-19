@@ -10,17 +10,12 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        if (Auth::user()->role_id != 1) {
-            abort(403);
+        if (Auth::user()->role_id !== 1 || Auth::user()->role_id === null || Auth::user() === null) {
+            abort(403, 'You are not admin');
         }
     }
     public function index()
     {
         return view('admin.dashboard');
-    }
-
-    public function product()
-    {
-        return view('admin.product');
     }
 }
